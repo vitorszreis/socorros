@@ -1,0 +1,8 @@
+/mnt/c/Users/vitor/Downloads/trab01-soja-ti-1/build/CMakeFiles/core.dir
+/mnt/c/Users/vitor/Downloads/trab01-soja-ti-1/build/CMakeFiles/test.dir
+/mnt/c/Users/vitor/Downloads/trab01-soja-ti-1/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/vitor/Downloads/trab01-soja-ti-1/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/vitor/Downloads/trab01-soja-ti-1/build/app/CMakeFiles/main_app.dir
+/mnt/c/Users/vitor/Downloads/trab01-soja-ti-1/build/app/CMakeFiles/test.dir
+/mnt/c/Users/vitor/Downloads/trab01-soja-ti-1/build/app/CMakeFiles/edit_cache.dir
+/mnt/c/Users/vitor/Downloads/trab01-soja-ti-1/build/app/CMakeFiles/rebuild_cache.dir
