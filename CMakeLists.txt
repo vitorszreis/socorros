@@ -1,31 +1,24 @@
+# Versão mínima do CMake e nome do projeto
 cmake_minimum_required(VERSION 3.14)
-project(Trabalho CXX)
+project(TrabalhoED2 CXX)
 
 # Define o padrão do C++ para C++17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Encontra todos os arquivos de codigo fonte na pasta src e suas subpastas
-file(GLOB_RECURSE CORE_SOURCES 
-    "src/*.cpp" 
-    "src/**/*.cpp"
-)
+# --- Define a biblioteca CORE ---
 
-# Cria uma biblioteca chamada core com todo o código principal do seu projeto.
-add_library(core ${CORE_SOURCES})
+# Encontra automaticamente todos os ficheiros .cpp dentro da pasta src e
+# armazena a lista na variável CORE_SOURCES.
+file(GLOB_RECURSE CORE_SOURCES "src/*.cpp")
 
-# Adiciona a pasta include e todas as suas subpastas ao caminho de busca de cabeçalhos.
-target_include_directories(core PUBLIC 
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/include/data
-    ${CMAKE_CURRENT_SOURCE_DIR}/include/entities
-    ${CMAKE_CURRENT_SOURCE_DIR}/include/queries
-    ${CMAKE_CURRENT_SOURCE_DIR}/include/structures
-)
+# Cria a biblioteca "core" a partir da lista de ficheiros encontrados.
+add_library(core STATIC ${CORE_SOURCES})
 
-# --- Seção de Testes ---
-enable_testing()
-# Manda o CMake entrar na pasta 'tests' e ler o CMakeLists.txt que está lá dentro
-# add_subdirectory(tests)
+# Adiciona a pasta "include" ao caminho de busca, permitindo que a biblioteca
+# encontre todos os seus ficheiros .h.
+target_include_directories(core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+# --- Define o Executável ---
+# Manda o CMake processar a subpasta "app", onde o programa principal é criado.
 add_subdirectory(app)
-

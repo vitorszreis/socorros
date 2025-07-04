@@ -1,0 +1,12 @@
+# Ignorar a pasta de build do CMake
+build/
+
+# Ignorar a pasta de dados onde os CSVs ficarão
+data/
+
+# Ignorar ficheiros de cache e binários específicos
+*.btree
+*.out
+
+# Ignorar pastas de configuração do editor de código
+.vscode/
